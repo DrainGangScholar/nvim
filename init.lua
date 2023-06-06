@@ -1,5 +1,7 @@
+require("boss.lsp")
 require("boss.remap")
 require("boss.packer")
 require("boss.fugitive")
+require("boss.undotree")
 require("boss.harpoon")
 require("boss")
