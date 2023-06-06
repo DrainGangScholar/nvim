@@ -1,2 +1,5 @@
 require("boss.remap")
+require("boss.packer")
+require("boss.fugitive")
+require("boss.harpoon")
 require("boss")
