@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
 			vim.cmd('colorscheme rose-pine')
 		end
 	})
+	use ('ojroques/nvim-osc52')
 	use('nvim-treesitter/nvim-treesitter', {run='TSUpdate'})
 	use('nvim-treesitter/playground')
 	use('theprimeagen/harpoon')
