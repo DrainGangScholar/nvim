@@ -67,3 +67,4 @@ The configuration also includes several additional plugins that enhance Vim's fu
 - [undotree](https://github.com/mbbill/undotree): Provides a visual representation of undo history.
 
 - [lsp-zero.nvim](https://github.com/VonHeikemen/lsp-zero.nvim): Simplifies LSP integration and autocompletion.
+
