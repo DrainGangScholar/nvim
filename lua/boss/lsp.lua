@@ -5,7 +5,10 @@ lsp.preset('recommended')
 lsp.ensure_installed({
 	'rust_analyzer',
 	'clangd',
+    'lua_ls'
 })
+
+
 
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
