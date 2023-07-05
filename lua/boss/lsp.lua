@@ -52,4 +52,22 @@ lsp.on_attach(function(client, bufnr)
 	vim.keymap.set("n", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
+local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
+local lsp_format_on_save = function(bufnr)
+  vim.api.nvim_clear_autocmds({group = augroup, buffer = bufnr})
+  vim.api.nvim_create_autocmd('BufWritePre', {
+    group = augroup,
+    buffer = bufnr,
+    callback = function()
+      vim.lsp.buf.format()
+    end,
+  })
+end
+
+lsp.preset('recommended')
+
+lsp.on_attach(function(client, bufnr)
+  lsp_format_on_save(bufnr)
+end)
+
 lsp.setup()
