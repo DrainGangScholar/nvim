@@ -19,7 +19,7 @@ local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
 	["<C-Up>"] = cmp.mapping.select_prev_item(cmp_select),
 	["<C-Down>"] = cmp.mapping.select_next_item(cmp_select),
-	["<C-Enter>"] = cmp.mapping.confirm({ select = true }),
+	["<leader>a"] = cmp.mapping.confirm({ select = true }),
 	["<C-1>"] = cmp.mapping.complete(),
 })
 
