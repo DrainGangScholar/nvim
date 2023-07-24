@@ -8,19 +8,17 @@ lsp.ensure_installed({
     'lua_ls'
 })
 
-
-
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
-
 -- DORADI
+
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
 	["<C-Up>"] = cmp.mapping.select_prev_item(cmp_select),
 	["<C-Down>"] = cmp.mapping.select_next_item(cmp_select),
-	["<leader>a"] = cmp.mapping.confirm({ select = true }),
-	["<C-1>"] = cmp.mapping.complete(),
+	["<C-y>"] = cmp.mapping.confirm({ select = true }),
+    ["<C-Space>"] = cmp.mapping.complete(),
 })
 
 lsp.setup_nvim_cmp({

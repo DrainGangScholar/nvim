@@ -1,5 +1,5 @@
 require("boss.remap")
+require("boss.set")
 require("boss.harpoon")
 require("boss.packer")
 require("boss.lsp")
-require("boss.set")
