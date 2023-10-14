@@ -9,9 +9,9 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
     use {
-        'olivercederborg/poimandres.nvim',
+        'Mofiqul/vscode.nvim',
         config = function()
-            vim.cmd('colorscheme poimandres')
+            vim.cmd('colorscheme vscode')
         end
     }
     use('ojroques/nvim-osc52')
