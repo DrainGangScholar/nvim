@@ -9,9 +9,11 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
     use {
-        'rebelot/kanagawa.nvim',
+         --        'rebelot/kanagawa.nvim',
+        'cocopon/iceberg.vim',
         config = function()
-            vim.cmd('colorscheme kanagawa-dragon')
+            --vim.cmd('colorscheme kanagawa-dragon')
+            vim.cmd('colorscheme iceberg')
         end
     }
     use('ojroques/nvim-osc52')
