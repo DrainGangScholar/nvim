@@ -9,7 +9,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "gopls" }
+                ensure_installed = { "lua_ls", "gopls", "clangd", "vtsls"}
             })
         end
     },
@@ -24,6 +24,13 @@ return {
             lspconfig.gopls.setup({
                 capabilities = capabilities
             })
+            lspconfig.clangd.setup({
+                capabilities = capabilities
+            })
+            lspconfig.vtsls.setup({
+                capabilities = capabilities
+            })
+            print(lspconfig)
             local opts = {}
             vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
             vim.keymap.set("n", "gi", function() vim.lsp.buf.implementation() end, opts)
