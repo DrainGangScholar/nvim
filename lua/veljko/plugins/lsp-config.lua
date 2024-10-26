@@ -30,7 +30,6 @@ return {
             lspconfig.vtsls.setup({
                 capabilities = capabilities
             })
-            print(lspconfig)
             local opts = {}
             vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
             vim.keymap.set("n", "gi", function() vim.lsp.buf.implementation() end, opts)
