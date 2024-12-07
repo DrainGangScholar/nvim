@@ -9,7 +9,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "gopls", "clangd", "vtsls","rust_analyzer"}
+                ensure_installed = { "lua_ls", "gopls", "clangd", "vtsls", "csharp_ls" }
             })
         end
     },
@@ -30,7 +30,7 @@ return {
             lspconfig.vtsls.setup({
                 capabilities = capabilities
             })
-            lspconfig.rust_analyzer.setup({
+            lspconfig.csharp_ls.setup({
                 capabilities = capabilities
             })
             local opts = {}
